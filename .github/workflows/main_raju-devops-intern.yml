@@ -24,7 +24,8 @@ jobs:
       - name: yarn install, build, and test
         run: |
           rm -rf ../node_modules
-          rm ../package-lock.json ../yarn.lock
+          rm -rf ../package-lock.json 
+          rm -rf ../yarn.lock
           yarn install
           yarn add vite
           yarn build --if-present
