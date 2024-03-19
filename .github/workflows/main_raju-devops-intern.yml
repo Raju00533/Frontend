@@ -32,7 +32,7 @@ jobs:
            
 
       - name: Zip artifact for deployment
-        run: zip -r release.zip . 
+        run: zip -r release.zip ./dist 
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
