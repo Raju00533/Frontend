@@ -24,7 +24,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           yarn install
-          yarn install vite
+          yarn add vite
           yarn build --if-present
           npm run dev --if-present
 
