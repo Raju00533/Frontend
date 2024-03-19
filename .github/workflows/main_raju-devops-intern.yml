@@ -23,6 +23,7 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          rm -rf ../node_modules
           yarn install
           yarn add vite
           yarn build --if-present
