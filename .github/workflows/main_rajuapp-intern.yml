@@ -4,13 +4,13 @@
 name: Build and deploy Node.js app to Azure Web App - rajuapp-intern
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
   workflow_dispatch:
 
 jobs:
   build:
+    if: "!github.event.release.prerelease"
     runs-on: ubuntu-latest
 
     steps:
