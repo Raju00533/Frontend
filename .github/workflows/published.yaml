@@ -6,7 +6,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  tag:
+    if: "!github.event.release.prerelease"
+    name: this is test
    
     runs-on: ubuntu-latest
 
